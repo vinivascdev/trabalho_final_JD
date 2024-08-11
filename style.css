@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #00ffa0;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgba(255, 255, 0, 0.9);
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 40px;
+}
+
+nav img {
+  height: 70px;
+}
+
+nav ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* header */
+
+header {
+  height: 100vh;
+  justify-content: center;
+  background: linear-gradient(rgba(91, 0, 165, 0.5), rgba(91, 0, 165, 0.5)),
+    url("/assets/background.jpg");
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.infos img {
+  height: 350px;
+}
+
+.sobre {
+  width: 350px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.sobre h1 {
+  color: #00ffa0;
+  font-family: Kdam Thmor Pro, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.sobre p {
+  color: white;
+  font-size: 20px;
+}
+
+.data {
+  color: white;
+  text-align: center;
+  margin: 30px 0;
+  font-family: Kdam Thmor Pro, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* atracoes */
+#atracoes {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+#atracoes h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.atracoes-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.atracao {
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  border-radius: 25px;
+  transition: 0.2s;
+  overflow: hidden;
+  background-color: #ad046c;
+  color: white;
+}
+
+.atracoes-intro {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.atracoes-intro p {
+  font-family: Kdam Thmor Pro, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.atracao div {
+  padding: 0 20px;
+}
+
+.atracao h2 {
+  margin-bottom: 15px;
+}
+
+.atracao:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.atracao img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+/* SLIDESHOW */
+.galeria img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, z-index 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.galeria img.expanded {
+  transform: scale(2);
+  z-index: 10;
+  position: relative;
+}
+
+.galeria p {
+  color: white;
+  font-family: Kdam Thmor Pro, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 25px;
+}
+
+.mySlides {
+  display: none;
+  height: 600px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.active {
+  background-color: white;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 50px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* contato */
+#contato {
+  height: 600px;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contato-contato p {
+  font-family: Kdam Thmor Pro, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.img img {
+  width: 500px;
+  height: 610px;
+  object-fit: cover;
+}
+
+.form {
+  background-color: #ad046c;
+  box-sizing: border-box;
+  height: 600px;
+  padding: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #830051;
+  border-radius: 12px;
+  border: 0;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.submit {
+  background-color: #ffff00;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #ad046c;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 900;
+  height: 50px;
+  margin-top: 70px;
+  outline: 0;
+  text-align: center;
+  transition: 300ms;
+  width: 35%;
+}
+
+.submit:hover {
+  scale: 1.1;
+  background-color: #ffff00;
+}
+
+#mensagem {
+  background-color: #830051;
+  border-radius: 12px;
+  border: 0;
+  font-family: sans-serif;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 20px;
+  width: 29rem;
+  margin-top: 30px;
+}
+
+#mensagem::placeholder {
+  color: #ffffff;
+  font-family: sans-serif;
+  line-height: 14px;
+  pointer-events: none;
+  font-size: 18px;
+}
+
+/* FAQ */
+.faq {
+    font-family: Kdam Thmor Pro, sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .accordion {
+    background-color: #eee;
+    color: #000000;
+    font-size: 25px;
+    font-family: Kdam Thmor Pro, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    cursor: pointer;
+    padding: 18px;
+    width: 70%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+.panel {
+    padding: 0 25px;
+    background-color: white;
+    width: 65%;
+    max-height: 0;
+    overflow: hidden;
+    color: black;
+    font-family: Kdam Thmor Pro, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    font-style: normal;
+    border-radius: 0 0 25px 25px;
+    margin-bottom: 20px;
+    margin-top: -25px;
+    transition: max-height 0.2s ease-out, padding 0.4s ease-out;
+}
+
+.panel.open {
+    max-height: 1000px;
+    padding: 25px; 
+}
+
+.accordion.active {
+    background-color: #ccc;
+}

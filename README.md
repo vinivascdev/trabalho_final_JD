@@ -1,0 +1,1 @@
+Projeto "Trabalho Final - Página de Evento Interativa com HTML, CSS e JAVASCRIPT" do curso "Iniciando a carreira de desenvolvedor Front-End" do programa Juventude Digital da Prefeitura de Fortaleza.

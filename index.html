@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calourada SMD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav -->
+
+    <!-- principal -->
+    <header id="sobre">
+
+        <nav>
+            <img src="/assets/logo.png" alt="Logo Evento" />
+    
+            <ul>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#atracoes">Atrações</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+              <li><a href="#contato2" id="contato-botao">Contato</a></li>
+            </ul>
+          </nav>
+
+      <div class="infos">
+
+      <div class="sobre">
+      <h1>A MAIOR CALOURADA DE TODA A UFC</h1>
+      <p>
+        Muita música, diversão e integração para começar o semestre com o pé direito. Venha conhecer seus colegas, fazer novos amigos e celebrar o início desse semestre universitário em grande estilo!
+    </p>
+    </div>
+
+        <img src="/assets/calourada.png" alt="" />
+    </div>
+
+    <div class="data">
+        <h1>21 de outubro | Bloco do SMD</h1>
+    </div>
+    </header>
+
+    <!-- início atrações -->
+    <section id="atracoes">
+
+        <div class="atracoes-intro">
+            <p>Atrações</p>
+        </div>
+
+      <div class="atracoes-box">
+        <div class="atracao">
+          <img src="/assets/ramemes.jpg" alt="Dj RaMeMes"/>
+          
+          <div>
+          <h2>Dj RaMeMes</h2>
+          <p>
+            O mestre dos beats inusitados e alquimista dos riffs insanos chega ao SMD
+          </p>
+        </div>
+        </div>
+
+        <div class="atracao">
+          <img
+            src="/assets/kendrick.png"
+            alt="Kendrick Lamar"
+          />
+
+          <div>
+          <h2>Kendrick Lamar</h2>
+          <p>
+            Espalhando a palavra de ódio contra o Drake pelo mundo
+          </p>
+        </div>
+        </div>
+
+        <div class="atracao">
+          <img
+            src="/assets/mitski.jpg"
+            alt="Mitski"
+          />
+
+          <div>
+          <h2>Mitski</h2>
+          <p>
+            "Cause my love is mine, all mine <br>
+            I love mine, mine, mine" - disse ela
+          </p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- início slideshow -->
+     <!-- Slideshow container -->
+
+<section class="galeria" id="galeria">
+    <p>Galeria</p>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="/assets/balada1.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="/assets/balada2.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="/assets/balada3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="/assets/background.jpg" style="width:100%">
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img-expanded">
+  </div>
+  
+</section>
+
+    <!-- início contato -->
+     <div class="contato-contato" id="contato2">
+        <p>Contato</p>
+    <section id="contato">
+      <div class="img">
+        <img
+          src="https://aticaeducacional.com.br/wp-content/uploads/2022/02/Conheca-as-baladas-mais-famosas-de-Santa-Catarina.jpg"
+          alt="Calcifer do filme O Castelo Animado"
+        />
+      </div>
+
+      <div class="form">
+        <div class="title">Dúvidas? Reclamações? Sugestões?<br>Manda pra gente!</div>
+
+        <form>
+          <div class="input-container">
+            <input
+              id="name"
+              class="input"
+              type="text"
+              required
+              placeholder="Nome"
+            />
+          </div>
+
+          <div class="input-container">
+            <input
+              id="email"
+              class="input"
+              type="email"
+              required
+              placeholder="Email"
+            />
+          </div>
+
+          <div>
+            <textarea
+              id="mensagem"
+              placeholder="Deixe Aqui Sua Mensagem!"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+</div>
+
+<!-- início FAQ -->
+
+<section class="faq">
+    <p>FAQ</p>
+<button class="accordion">O que significa SMD?</button>
+<div class="panel">
+  <p>Sistemas e Mídias Digitais, um curso cheio de nerds da UFC.</p>
+</div>
+
+<button class="accordion">O Kendrick Lamar vai mesmo tocar nesse evento?</button>
+<div class="panel">
+  <p>Talvez...</p>
+</div>
+
+<button class="accordion">Essa calourada vai ser divertida?</button>
+<div class="panel">
+  <p>Provavelmente vai ser a pior calourada da sua vida.</p>
+</div>
+</section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
